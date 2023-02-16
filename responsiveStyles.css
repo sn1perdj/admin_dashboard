@@ -1,0 +1,19 @@
+@media screen and (max-width: 1650px) {
+    .nav {
+        grid-template-columns: 7fr 3fr;
+    }
+}
+
+
+@media screen and (max-width: 1430px) {
+    .nav {
+        grid-template-columns: 6.5fr 3.5fr;
+    }
+}
+
+
+@media screen and (max-width: 1240px) {
+    .nav {
+        grid-template-columns: 5fr 5fr;
+    }
+}

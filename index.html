@@ -18,6 +18,7 @@
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsiveStyles.css">
 
 </head>
 
@@ -204,15 +205,80 @@
                 </div>
             </div>
         </div>
-        <div>
+        <div id="dashboard">
             <span class="material-symbols-outlined">
                 dashboard
             </span>
+            <div id="dashboard-container">
+                <div class="dashboard-items">
+                    <iconify-icon icon="mdi:tablet-dashboard"></iconify-icon>
+                    <p>Dashboard</p>
+                    <p>View All</p>
+                </div>
+                <div class="dashboard-items">
+                    <iconify-icon icon="mdi:application-cog-outline"></iconify-icon>
+                    <p>Application</p>
+                    <p>View All</p>
+                </div>
+                <div class="dashboard-items">
+                    <iconify-icon icon="mdi:format-page-break"></iconify-icon>
+                    <p>Pages</p>
+                    <p>Crafted Pages</p>
+                </div>
+                <div class="dashboard-items">
+                    <iconify-icon icon="mdi:page-layout-header"></iconify-icon>
+                    <p>Layouts</p>
+                    <p>Crafted Layouts</p>
+                </div>
+            </div>
         </div>
-        <div>
+        <div id="profile">
             <span class="material-symbols-outlined">
                 settings
             </span>
+            <div id="profile-container">
+                <div class="items">
+                    <div class="profile-items">
+                        <span class="material-symbols-outlined">
+                            person
+                            </span>
+                        <p>My Profile</p>
+                    </div>
+                    <div class="profile-items">
+                        <span class="material-symbols-outlined">
+                            manage_accounts
+                            </span>
+                        <p>Settings</p>
+                    </div>
+                    <div class="profile-items">
+                        <span class="material-symbols-outlined">
+                            add_card
+                            </span>
+                        <p>Billing</p>
+                    </div>
+                    <div class="profile-items">
+                        <span class="material-symbols-outlined">
+                            groups
+                            </span>
+                        <p>Manage Team</p>
+                    </div>
+                    <div class="profile-items">
+                        <span class="material-symbols-outlined">
+                            calendar_month
+                            </span>
+                        <p>My Events</p>
+                    </div>
+                    <div class="profile-items">
+                        <span class="material-symbols-outlined">
+                            support_agent
+                            </span>
+                        <p>Support Ticket</p>
+                    </div>
+                </div>
+                <div class="items sign-out">
+                    <p>Sign Out</p>
+                </div>
+            </div>
         </div>
     </div>
 </nav>
@@ -224,6 +290,7 @@
 
 
     <script src="app.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.5/iconify-icon.min.js"></script>
 </body>
 
 </html>
