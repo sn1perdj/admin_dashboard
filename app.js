@@ -25,3 +25,18 @@ const fullscreenButton = document.querySelector('#fullscreen-btn');
       }
     }
   });
+
+
+
+
+  // Show & Hide Sidebar
+  const openSide = document.querySelector(".sidebar-show-btn");
+  const closeSide = document.querySelector(".back-btn");
+  const siderBar = document.querySelector(".aside");
+
+  openSide.addEventListener('click', () => {
+    siderBar.style.display = 'block';
+  })
+  closeSide.addEventListener('click', () => {
+    siderBar.style.display = 'none';
+  })

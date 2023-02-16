@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Julee&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -16,43 +18,49 @@
     --font-color-light: #ffffff;
     --sub-font: #c3c4c3;
     --danger: #F94A29;
+    --btn-color-red: rgba(233, 13, 13, 0.5);
     --bg-sidebar: #01140e;
     --border-color: rgba(179, 179, 187, 0.5);
 }
 
+html,
 body {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     display: grid;
-    grid-template-columns: 300px 2fr 3fr;
+    grid-template-columns: repeat(50, 1fr);
 }
 
 
 /* ------------------ --------- ------ -Sidebar */
-.sidebar {
-    grid-column: 1/2;
+.aside {
+    min-height: 100vh;
+    grid-column: 1/12;
     grid-row: 1/end;
+}
+
+.sidebar {
+    min-height: 100vh;
     background-color: var(--bg-sidebar);
     color: var(--font-color-light);
     display: grid;
-    grid-template-rows: repeat(10, 1fr);
-    padding: 10px 0px 0px 40px;
+    grid-template-rows: 2fr 6fr 2fr;
 }
 
-.park-info {
-    grid-row: 3/5;
+.menu-container {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
-.reports {
-    grid-row: 5/7;
-}
-
-.payments {
-    grid-row: 7/9;
+.logo {
+    padding: 30px;
+    color: var(--danger);
 }
 
 .sidebar p {
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 .park-info>span,
@@ -67,19 +75,10 @@ body {
     font-size: 1rem;
 }
 
-.logo-item {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.logo-item span {
-    font-size: 40px;
-}
-
 .logo-item p {
-    font-weight: 500;
-    font-size: 35px;
+    font-family: 'Julee', cursive;
+    font-weight: bolder;
+    font-size: 65px;
 }
 
 .park-info-items,
@@ -117,11 +116,13 @@ body {
     gap: 10px;
     align-items: center;
     line-height: 1.5rem;
+    height: 100px;
+    margin-left: 10px;
 }
 
 .img-container {
-    height: 80px;
-    width: 80px;
+    height: 60px;
+    width: 60px;
     padding: 10px;
     border-radius: 50%;
     border-top: 4px dashed #ffcc00;
@@ -142,26 +143,50 @@ body {
 }
 
 .profile div p:nth-child(1) {
-    font-size: 1rem;
+    font-size: 0.75rem;
     font-weight: bold;
 }
 
 .profile div p:nth-child(2) {
     color: var(--sub-font);
-    font-size: 0.75rem;
+    font-size: 0.65rem;
+}
+
+.back-btn {
+    display: none;
+    grid-row: 11/end;
+}
+
+.back-btn button {
+    background-color: var(--btn-color-red);
+    color: white;
+    height: 50px;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    cursor: pointer;
 }
 
 
 
-
-
 /* --------------------------------- Nav Items */
+.responsive-body {
+    grid-column: 12/end;
+}
+
 .nav {
-    grid-column: 2/end;
     height: 70px;
     padding: 10px;
     display: grid;
     grid-template-columns: 7.5fr 2.5fr;
+}
+
+.sidebar-show-btn {
+    display: none;
+    border-radius: 10px;
+    width: 60px;
 }
 
 #search {
@@ -193,7 +218,8 @@ body {
     padding: 10px;
 }
 
-.nav-widgets div:hover {
+.nav-widgets div:hover,
+.sidebar-show-btn:hover {
     cursor: pointer;
     background-color: rgba(146, 139, 139, 0.3);
     border-radius: 10px;

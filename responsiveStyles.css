@@ -1,19 +1,113 @@
-@media screen and (max-width: 1650px) {
+@media screen and (min-width : 2200px) and (max-width : 2500px) {
+    .aside {
+        grid-column: 1/8;
+    }
+    .responsive-body {
+        grid-column: 8/end;
+    }
+    .nav {
+        grid-template-columns: 8fr 2fr;
+    }
+}
+
+
+
+@media screen and (min-width : 2000px) and (max-width : 2200px) {
+    .aside {
+        grid-column: 1/8;
+    }
+    .responsive-body {
+        grid-column: 8/end;
+    }
+    .nav {
+        grid-template-columns: 8fr 2fr;
+    }
+}
+
+
+@media screen and (min-width : 1800px) and (max-width : 2000px) {
+    .aside {
+        grid-column: 1/10;
+    }
+    .responsive-body {
+        grid-column: 10/end;
+    }
+    .nav {
+        grid-template-columns: 7.5fr 2.5fr;
+    }
+}
+
+
+@media screen and (min-width : 1600px) and (max-width : 1800px) {
+    .aside {
+        grid-column: 1/11;
+    }
+    .responsive-body {
+        grid-column: 11/end;
+    }
+    .nav {
+        grid-template-columns: 7.5fr 2.5fr;
+    }
+}
+
+
+@media screen and (min-width : 1400px) and (max-width : 1600px) {
+    .aside {
+        grid-column: 1/12;
+    }
+    .responsive-body {
+        grid-column: 12/end;
+    }
     .nav {
         grid-template-columns: 7fr 3fr;
     }
 }
 
 
-@media screen and (max-width: 1430px) {
+@media screen and (min-width : 1200px) and (max-width : 1400px) {
+    .aside {
+        grid-column: 1/13;
+    }
+    .responsive-body {
+        grid-column: 13/end;
+    }
     .nav {
-        grid-template-columns: 6.5fr 3.5fr;
+        grid-template-columns: 6fr 4fr;
     }
 }
 
 
-@media screen and (max-width: 1240px) {
+@media screen and (min-width : 1024px) and (max-width : 1200px) {
+    .aside {
+        grid-column: 1/16;
+    }
+    .responsive-body {
+        grid-column: 16/end;
+    }
     .nav {
         grid-template-columns: 5fr 5fr;
+    }
+}
+
+
+@media screen and (min-width : 800px) and (max-width : 1024px) {
+    .aside {
+        display: none;
+        position: fixed;
+    }
+    .profile {
+        display: none;
+    }
+    .back-btn {
+        display: block;
+    }
+    .responsive-body {
+        grid-column: 1/end;
+    }
+    .nav {
+        grid-template-columns: 1fr 4.5fr 4.5fr;
+    }
+    .sidebar-show-btn {
+        display: block;
     }
 }
