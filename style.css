@@ -1,0 +1,353 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    appearance: none;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+:root {
+    --font-color-dark: #23312b;
+    --font-color-light: #ffffff;
+    --sub-font: #c3c4c3;
+    --danger: #F94A29;
+    --bg-sidebar: #01140e;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 300px 2fr 3fr;
+}
+
+
+/* ------------------ --------- ------ -Sidebar */
+.sidebar {
+    grid-column: 1/2;
+    grid-row: 1/end;
+    background-color: var(--bg-sidebar);
+    color: var(--font-color-light);
+    display: grid;
+    grid-template-rows: repeat(10, 1fr);
+    padding: 10px 0px 0px 40px;
+}
+
+.park-info {
+    grid-row: 3/5;
+}
+
+.reports {
+    grid-row: 5/7;
+}
+
+.payments {
+    grid-row: 7/9;
+}
+
+.sidebar p {
+    letter-spacing: 2px;
+}
+
+.park-info>span,
+.reports>span,
+.payments>span,
+.profile p:nth-child(3) {
+    color: var(--sub-font);
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    font-size: 1rem;
+}
+
+.logo-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-item span {
+    font-size: 40px;
+}
+
+.logo-item p {
+    font-weight: 500;
+    font-size: 35px;
+}
+
+.park-info-items,
+.reports-items,
+.payments-items {
+    display: flex;
+    flex-direction: column;
+}
+
+.park-info-items div,
+.reports-items div,
+.payments-items div,
+.logo-item div {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    box-shadow: 0 0 10px rgba(161, 47, 47, 0.3);
+}
+
+.park-info-items div:hover,
+.reports-items div:hover,
+.payments-items div:hover {
+    color: var(--danger);
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 15px rgba(146, 139, 139, 0.3);
+}
+
+.profile {
+    grid-row: 10/11;
+    border-top: 2px solid rgba(44, 41, 44, 0.7);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    line-height: 1.5rem;
+}
+
+.img-container {
+    height: 80px;
+    width: 80px;
+    padding: 10px;
+    border-radius: 50%;
+    border-top: 4px dashed #ffcc00;
+    animation: spin 10s infinite linear;
+}
+
+.img-container img {
+    animation: spin 10s infinite reverse linear;
+    align-self: center;
+    width: 100%;
+    border-radius: 50%;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+.profile div p:nth-child(1) {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.profile div p:nth-child(2) {
+    color: var(--sub-font);
+    font-size: 0.75rem;
+}
+
+
+
+
+
+/* --------------------------------- Nav Items */
+.nav {
+    grid-column: 2/end;
+    height: 70px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 7.5fr 2.5fr;
+}
+
+#search {
+    border: 1px solid rgba(146, 139, 139, 0.3);
+    border-radius: 10px;
+    padding-left: 10px;
+    height: 100%;
+    width: 100%;
+    font-size: 15px;
+    color: black;
+}
+
+#search:hover {
+    border: 1px solid blue;
+}
+
+.nav-widgets {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.nav-widgets div {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--font-color-dark);
+    padding: 10px;
+}
+
+.nav-widgets div:hover {
+    cursor: pointer;
+    background-color: rgba(146, 139, 139, 0.3);
+    border-radius: 10px;
+}
+
+.nav-widgets div > * {
+    color: var(--font-color-dark);
+}
+
+.nav-widgets div > *:hover {
+    color: red;
+}
+
+.nav-widgets .material-symbols-outlined {
+    font-size: 30px;
+}
+
+
+/* ------------------------------------------------ Notification Control */
+.notification-button {
+    font-size: 20px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#notification-popup {
+    padding: 0px 20px;
+    position: absolute;
+    border: 1px solid grey;
+    border-radius: 10px;
+    top: 60px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.notification-container:hover #notification-popup {
+    visibility: visible;
+    opacity: 1;
+    background-color: #fff;
+}
+
+#notification-popup .noti-head {
+    padding: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid grey;
+    pointer-events: none;
+}
+
+.noti-head div:nth-child(1) {
+    font-weight: 500;
+}
+
+.noti-head div:nth-child(2) {
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    color: var(--font-color-light);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#notification-popup .noti-body {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+#notification-popup .noti-body:hover {
+    background-color: #fff;
+}
+
+#notification-popup .noti-body-child {
+    max-width: 100%;
+    margin: 10px 0;
+    height: 80px;
+    display: grid;
+    grid-template-columns: 2fr 6fr 2fr;
+    cursor: pointer;
+}
+
+#notification-popup .noti-body > div > img {
+    border-radius: 20%;
+    height: 50px;
+}
+
+#notification-popup .noti-details{
+    margin: 0 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px 0;
+    letter-spacing: 0.5px;
+    pointer-events: none;
+}
+
+#notification-popup .noti-details p:nth-child(1) {
+    align-self: self-start;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#notification-popup .noti-details p:nth-child(2) {
+    font-size: 0.75rem;
+}
+
+#notification-popup .noti-details + div {
+    font-size: 1rem;
+    pointer-events: none;
+}
+
+
+/* ---------------------------- Translate */
+#translate > .country {
+    position: absolute;
+    width: 170px;
+    top: 60px;
+    height: 200px;
+    border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10%;
+    padding: 10px 0;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#translate:hover .country {
+    visibility: visible;
+    opacity: 1;
+    background-color: #fff;
+}
+
+#translate > .country > div {
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+    gap: 5px;
+    align-self: self-start;
+}
+
+#translate > .country > div > img {
+    margin-left: 5px;
+    justify-self: center;
+}
+
+#translate > .country > div:last-child img {
+    margin-left: 6px;
+    height: 14px;
+    width: 19px;
+}
+
+#translate > .country > div > p {
+    margin-left: 5px;
+}
