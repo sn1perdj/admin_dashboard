@@ -74,6 +74,9 @@
     .nav {
         grid-template-columns: 6fr 4fr;
     }
+    .welcome .item2 {
+        margin-top: 2.5rem;
+    }
 }
 
 
@@ -88,12 +91,24 @@
         grid-template-columns: 5fr 5fr;
     }
     .cards {
+        grid-row: 3/12;
         margin-top: 1rem;
         flex-wrap: wrap;
         max-height: 10rem;
     }
     .cards > div {
         width: 48%;
+    }
+    .details {
+        grid-row: 14/15;
+        flex-wrap: wrap;
+        max-height: 10rem;
+    }
+    .details > div {
+        width: 46%;
+    }
+    .welcome .item2 {
+        margin-top: 2.5rem;
     }
 }
 
@@ -119,11 +134,23 @@
         display: block;
     }
     .cards {
+        grid-row: 3/12;
         flex-wrap: wrap;
         max-height: 10rem;
     }
     .cards > div {
         width: 23rem;
+    }
+    .details {
+        grid-row: 11/15;
+        flex-wrap: wrap;
+        max-height: 10rem;
+    }
+    .details > div {
+        width: 46%;
+    }
+    .welcome .item2 {
+        margin-top: 2.5rem;
     }
 }
 
@@ -164,12 +191,23 @@
         display: none;
     }
     .cards {
+        grid-row: 3/12;
         flex-wrap: wrap;
         max-height: 10rem;
-
     }
     .cards > div {
         width: 48%;
+    }
+    .details {
+        grid-row: 11/15;
+        flex-wrap: wrap;
+        max-height: 1rem;
+    }
+    .details > div {
+        width: 46%;
+    }
+    .welcome .item2 {
+        margin-top: 2rem;
     }
 }
 
@@ -210,10 +248,22 @@
         display: none;
     }
     .cards {
+        grid-row: 3/12;
         flex-wrap: wrap;
         max-height: 10rem;
     }
     .cards > div {
         width: 100%;
+    }
+    .details {
+        grid-row: 20/21;
+        flex-wrap: wrap;
+        max-height: 1rem;
+    }
+    .details > div {
+        width: 100%;
+    }
+    .welcome .item2 {
+        margin-top: 1.5rem;
     }
 }
