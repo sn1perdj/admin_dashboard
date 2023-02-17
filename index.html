@@ -125,176 +125,247 @@
     </section>
 
     <!-- Navbar -->
-<nav class="nav responsive-body">
-    <button class="sidebar-show-btn">
-        <span class="material-symbols-outlined">
-            menu
+    <nav class="nav responsive-body">
+        <button class="sidebar-show-btn">
+            <span class="material-symbols-outlined">
+                menu
             </span>
-    </button>
-    <div class="input">
-        <input type="text" id="search" placeholder="Enter your search keyword">
+        </button>
+        <div class="input">
+            <input type="text" id="search" placeholder="Enter your search keyword">
+        </div>
+        <div class="nav-widgets">
+            <div class="notification-container">
+                <button class="notification-button">Notification</button>
+                <span class="material-symbols-outlined bell-icon">
+                    notifications
+                </span>
+                <div id="notification-popup">
+                    <div class="noti-head">
+                        <div>Notifications Center</div>
+                        <div>4</div>
+                    </div>
+                    <div class="noti-body">
+                        <div class="noti-body-child">
+                            <img src="./img/logo-1.jpg" alt="">
+                            <div class="noti-details">
+                                <p>Olive Tree</p>
+                                <p>making it over 3000 years old</p>
+                            </div>
+                            <div>
+                                <p>5MIN</p>
+                            </div>
+                        </div>
+                        <div class="noti-body-child">
+                            <img src="img/avatar2.jpg" alt="">
+                            <div class="noti-details">
+                                <p>Del Phineum</p>
+                                <p>There are many variations of passage</p>
+                            </div>
+                            <div>
+                                <p>15MIN</p>
+                            </div>
+                        </div>
+                        <div class="noti-body-child">
+                            <img src="img/avatar3.jpg" alt="">
+                            <div class="noti-details">
+                                <p>Rose Bush</p>
+                                <p>changed an issue from "In Progress" to</p>
+                            </div>
+                            <div>
+                                <p>40MIN</p>
+                            </div>
+                        </div>
+                        <div class="noti-body-child">
+                            <img src="img/avatar4.jpg" alt="">
+                            <div class="noti-details">
+                                <p>Eileen Dover</p>
+                                <p>It is long established fact that a reader</p>
+                            </div>
+                            <div>
+                                <p>1HR</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="fullscreen">
+                <span class="material-symbols-outlined" id="fullscreen-btn">
+                    fullscreen_exit
+                </span>
+            </div>
+            <div id="translate">
+                <span class="material-symbols-outlined">
+                    g_translate
+                </span>
+                <div class="country">
+                    <div>
+                        <img src="img/uk.svg" alt="">
+                        <p>UK English</p>
+                    </div>
+                    <div>
+                        <img src="img/us.svg" alt="">
+                        <p>US English</p>
+                    </div>
+                    <div>
+                        <img src="img/germany.svg" alt="">
+                        <p>Germany</p>
+                    </div>
+                    <div>
+                        <img src="img/in.svg" alt="">
+                        <p>Hindi</p>
+                    </div>
+                </div>
+            </div>
+            <div id="dashboard">
+                <span class="material-symbols-outlined">
+                    dashboard
+                </span>
+                <div id="dashboard-container">
+                    <div class="dashboard-items">
+                        <iconify-icon icon="mdi:tablet-dashboard"></iconify-icon>
+                        <p>Dashboard</p>
+                        <p>View All</p>
+                    </div>
+                    <div class="dashboard-items">
+                        <iconify-icon icon="mdi:application-cog-outline"></iconify-icon>
+                        <p>Application</p>
+                        <p>View All</p>
+                    </div>
+                    <div class="dashboard-items">
+                        <iconify-icon icon="mdi:format-page-break"></iconify-icon>
+                        <p>Pages</p>
+                        <p>Crafted Pages</p>
+                    </div>
+                    <div class="dashboard-items">
+                        <iconify-icon icon="mdi:page-layout-header"></iconify-icon>
+                        <p>Layouts</p>
+                        <p>Crafted Layouts</p>
+                    </div>
+                </div>
+            </div>
+            <div id="profile">
+                <span class="material-symbols-outlined">
+                    settings
+                </span>
+                <div id="profile-container">
+                    <div class="items">
+                        <div class="profile-items">
+                            <span class="material-symbols-outlined">
+                                person
+                            </span>
+                            <p>My Profile</p>
+                        </div>
+                        <div class="profile-items">
+                            <span class="material-symbols-outlined">
+                                manage_accounts
+                            </span>
+                            <p>Settings</p>
+                        </div>
+                        <div class="profile-items">
+                            <span class="material-symbols-outlined">
+                                add_card
+                            </span>
+                            <p>Billing</p>
+                        </div>
+                        <div class="profile-items">
+                            <span class="material-symbols-outlined">
+                                groups
+                            </span>
+                            <p>Manage Team</p>
+                        </div>
+                        <div class="profile-items">
+                            <span class="material-symbols-outlined">
+                                calendar_month
+                            </span>
+                            <p>My Events</p>
+                        </div>
+                        <div class="profile-items">
+                            <span class="material-symbols-outlined">
+                                support_agent
+                            </span>
+                            <p>Support Ticket</p>
+                        </div>
+                    </div>
+                    <div class="items sign-out">
+                        <p>Sign Out</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Welcome Message -->
+    <div class="welcome responsive-body">
+        <div class="item1">Home <span>/</span> Dashboard</div>
+        <div class="item2">Welcome back, <span>Amit!</span></div>
+        <div class="item3">You have 56 new orders and 4 new notifications.</div>
     </div>
-    <div class="nav-widgets">
-        <div class="notification-container">
-            <button class="notification-button">Notification</button>
-            <div id="notification-popup">
-                <div class="noti-head">
-                    <div>Notifications Center</div>
-                    <div>4</div>
-                </div>
-                <div class="noti-body">
-                    <div class="noti-body-child">
-                        <img src="./img/logo-1.jpg" alt="">
-                        <div class="noti-details">
-                            <p>Olive Tree</p>
-                            <p>making it over 3000 years old</p>
-                        </div>
-                        <div>
-                            <p>5MIN</p>
-                        </div>
-                    </div>
-                    <div class="noti-body-child">
-                        <img src="img/avatar2.jpg" alt="">
-                        <div class="noti-details">
-                            <p>Del Phineum</p>
-                            <p>There are many variations of passage</p>
-                        </div>
-                        <div>
-                            <p>15MIN</p>
-                        </div>
-                    </div>
-                    <div class="noti-body-child">
-                        <img src="img/avatar3.jpg" alt="">
-                        <div class="noti-details">
-                            <p>Rose Bush</p>
-                            <p>changed an issue from "In Progress" to</p>
-                        </div>
-                        <div>
-                            <p>40MIN</p>
-                        </div>
-                    </div>
-                    <div class="noti-body-child">
-                        <img src="img/avatar4.jpg" alt="">
-                        <div class="noti-details">
-                            <p>Eileen Dover</p>
-                            <p>It is long established fact that a reader</p>
-                        </div>
-                        <div>
-                            <p>1HR</p>
-                        </div>
-                    </div>
-                </div>
+
+    <!-- Analytics cards -->
+    <div class="cards responsive-body">
+        <div class="card1">
+            <div class="cars">
+                <p>NEW CARS</p>
+                <span class="material-symbols-outlined">
+                    directions_car
+                    </span>
+            </div>
+            <div class="data">
+                <span>51</span>
+                <span>13%</span>
+            </div>
+            <div class="text">
+                Analytics for last week
             </div>
         </div>
-        <div>
-            <span class="material-symbols-outlined" id="fullscreen-btn">
-                fullscreen_exit
-            </span>
-        </div>
-        <div id="translate">
-            <span class="material-symbols-outlined">
-                g_translate
-            </span>
-            <div class="country">
-                <div>
-                    <img src="img/uk.svg" alt="">
-                    <p>UK English</p>
-                </div>
-                <div>
-                    <img src="img/us.svg" alt="">
-                    <p>US English</p>
-                </div>
-                <div>
-                    <img src="img/germany.svg" alt="">
-                    <p>Germany</p>
-                </div>
-                <div>
-                    <img src="img/in.svg" alt="">
-                    <p>Hindi</p>
-                </div>
+        <div class="card2">
+            <div class="cars">
+                <p>EXPENSES</p>
+                <span class="material-symbols-outlined">
+                    price_change
+                    </span>
+            </div>
+            <div class="data">
+                <span>$3,251</span>
+                <span>13%</span>
+            </div>
+            <div class="text">
+                Analytics for last week
             </div>
         </div>
-        <div id="dashboard">
-            <span class="material-symbols-outlined">
-                dashboard
-            </span>
-            <div id="dashboard-container">
-                <div class="dashboard-items">
-                    <iconify-icon icon="mdi:tablet-dashboard"></iconify-icon>
-                    <p>Dashboard</p>
-                    <p>View All</p>
-                </div>
-                <div class="dashboard-items">
-                    <iconify-icon icon="mdi:application-cog-outline"></iconify-icon>
-                    <p>Application</p>
-                    <p>View All</p>
-                </div>
-                <div class="dashboard-items">
-                    <iconify-icon icon="mdi:format-page-break"></iconify-icon>
-                    <p>Pages</p>
-                    <p>Crafted Pages</p>
-                </div>
-                <div class="dashboard-items">
-                    <iconify-icon icon="mdi:page-layout-header"></iconify-icon>
-                    <p>Layouts</p>
-                    <p>Crafted Layouts</p>
-                </div>
+        <div class="card3">
+            <div class="cars">
+                <p>REVENUE</p>
+                <span class="material-symbols-outlined">
+                    credit_score
+                    </span>
+            </div>
+            <div class="data">
+                <span>$18,925</span>
+                <span>78%</span>
+            </div>
+            <div class="text">
+                Analytics for last week
             </div>
         </div>
-        <div id="profile">
-            <span class="material-symbols-outlined">
-                settings
-            </span>
-            <div id="profile-container">
-                <div class="items">
-                    <div class="profile-items">
-                        <span class="material-symbols-outlined">
-                            person
-                            </span>
-                        <p>My Profile</p>
-                    </div>
-                    <div class="profile-items">
-                        <span class="material-symbols-outlined">
-                            manage_accounts
-                            </span>
-                        <p>Settings</p>
-                    </div>
-                    <div class="profile-items">
-                        <span class="material-symbols-outlined">
-                            add_card
-                            </span>
-                        <p>Billing</p>
-                    </div>
-                    <div class="profile-items">
-                        <span class="material-symbols-outlined">
-                            groups
-                            </span>
-                        <p>Manage Team</p>
-                    </div>
-                    <div class="profile-items">
-                        <span class="material-symbols-outlined">
-                            calendar_month
-                            </span>
-                        <p>My Events</p>
-                    </div>
-                    <div class="profile-items">
-                        <span class="material-symbols-outlined">
-                            support_agent
-                            </span>
-                        <p>Support Ticket</p>
-                    </div>
-                </div>
-                <div class="items sign-out">
-                    <p>Sign Out</p>
-                </div>
+        <div class="card4">
+            <div class="cars">
+                <p>NEW LEADS</p>
+                <span class="material-symbols-outlined">
+                    work_history
+                    </span>
+            </div>
+            <div class="data">
+                <span>125</span>
+                <span>55%</span>
+            </div>
+            <div class="text">
+                Analytics for last week
             </div>
         </div>
+
     </div>
-</nav>
-
-
-
-
 
 
 

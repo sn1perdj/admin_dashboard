@@ -10,7 +10,6 @@
     list-style: none;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    overflow: hidden;
 }
 
 :root {
@@ -18,29 +17,28 @@
     --font-color-light: #ffffff;
     --sub-font: #c3c4c3;
     --danger: #F94A29;
-    --btn-color-red: rgba(233, 13, 13, 0.5);
+    --btn-color-red: #dc3545;
     --bg-sidebar: #01140e;
     --border-color: rgba(179, 179, 187, 0.5);
 }
 
-html,
 body {
     width: 100vw;
-    min-height: 100vh;
     display: grid;
     grid-template-columns: repeat(50, 1fr);
+    grid-template-rows: repeat(20, auto);
+    min-height: 100vh;
 }
 
 
 /* ------------------ --------- ------ -Sidebar */
 .aside {
-    min-height: 100vh;
     grid-column: 1/12;
-    grid-row: 1/end;
+    grid-row: 1/21;
 }
 
 .sidebar {
-    min-height: 100vh;
+    min-height: 100%;
     background-color: var(--bg-sidebar);
     color: var(--font-color-light);
     display: grid;
@@ -51,12 +49,11 @@ body {
     padding-left: 20px;
     display: flex;
     flex-direction: column;
-    gap: 40px;
 }
 
 .logo {
     padding: 30px;
-    color: var(--danger);
+    color: var(--btn-color-red);
 }
 
 .sidebar p {
@@ -92,7 +89,7 @@ body {
 .reports-items div,
 .payments-items div,
 .logo-item div {
-    height: 50px;
+    min-height: 50px;
     display: flex;
     align-items: center;
     gap: 25px;
@@ -162,7 +159,8 @@ body {
     color: white;
     height: 50px;
     width: 100%;
-    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     font-size: 18px;
     letter-spacing: 2px;
     font-weight: 600;
@@ -177,6 +175,7 @@ body {
 }
 
 .nav {
+    grid-row: 1/2;
     height: 70px;
     padding: 10px;
     display: grid;
@@ -243,6 +242,10 @@ body {
     font-size: 20px;
     background-color: transparent;
     cursor: pointer;
+}
+
+.bell-icon {
+    display: none;
 }
 
 #notification-popup {
@@ -471,4 +474,99 @@ body {
 #profile-container .sign-out p {
     color: var(--font-color-light);
     font-size: 14px;
+}
+
+
+
+/* ---------------------- Welcome Message */
+.welcome {
+    grid-row: 2/3;
+    padding-left: 20px;
+}
+
+.welcome .item1 {
+    font-weight: 500;
+}
+
+.welcome .item1 span {
+    font-weight: 100;
+    opacity: 0.75;
+    margin: 0 5px;
+}
+
+.welcome .item2 {
+    margin-top: 5px;
+    color: var(--font-color-dark);
+    font-weight: 700;
+    font-size: 1.5rem;
+    opacity: 0.85;
+}
+
+.welcome .item2 span {
+    margin-left: 5px;
+}
+
+.welcome .item3 {
+    font-size: 0.75rem;
+    color: var(--font-color-dark);
+    font-weight: 400;
+}
+
+
+
+
+/* --------------------------- Analytics Cards */
+.cards {
+    max-width: 100%;
+    margin: 0 1.35rem;
+    grid-row: 3/8;
+    display: flex;
+    gap: 1.35rem;
+}
+
+.cards > div {
+    border: 1px dashed var(--border-color);
+    border-radius: 10px;
+    width: 20rem;
+    height: 10rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.cards > div > .cars {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cards > div > .cars > p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: var(--sub-font);
+}
+
+.cards > div > .cars > span {
+    color: #5b28d1;    
+}
+
+.cards > div > .data {
+    margin-top: 1rem;
+}
+
+.cards > div > .data span:nth-child(1) {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.cards > div > .data span:nth-child(2) {
+    margin-left: 0.2rem;
+    font-size: 0.75rem;
+    font-weight: 300;
+}
+
+.cards > div > .text {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--sub-font);
 }

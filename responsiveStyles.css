@@ -87,6 +87,14 @@
     .nav {
         grid-template-columns: 5fr 5fr;
     }
+    .cards {
+        margin-top: 1rem;
+        flex-wrap: wrap;
+        max-height: 10rem;
+    }
+    .cards > div {
+        width: 48%;
+    }
 }
 
 
@@ -109,5 +117,103 @@
     }
     .sidebar-show-btn {
         display: block;
+    }
+    .cards {
+        flex-wrap: wrap;
+        max-height: 10rem;
+    }
+    .cards > div {
+        width: 23rem;
+    }
+}
+
+
+@media screen and (min-width : 572px) and (max-width : 800px) {
+    .aside {
+        display: none;
+        position: fixed;
+    }
+    .profile {
+        display: none;
+    }
+    .back-btn {
+        display: block;
+    }
+    .responsive-body {
+        grid-column: 1/end;
+    }
+    .nav {
+        grid-template-columns: 1fr 3.5fr 2fr;
+    }
+    .sidebar-show-btn {
+        display: block;
+    }
+    .notification-button {
+        display: none;
+    }
+    .bell-icon {
+        display: inline-block;
+    }
+    .notification-container {
+        background-color: #fff;
+    }
+    #fullscreen {
+        display: none;
+    }
+    #dashboard {
+        display: none;
+    }
+    .cards {
+        flex-wrap: wrap;
+        max-height: 10rem;
+
+    }
+    .cards > div {
+        width: 48%;
+    }
+}
+
+
+@media screen and (min-width : 360px) and (max-width : 572px) {
+    .aside {
+        display: none;
+        position: fixed;
+    }
+    .profile {
+        display: none;
+    }
+    .back-btn {
+        display: block;
+    }
+    .responsive-body {
+        grid-column: 1/end;
+    }
+    .nav {
+        grid-template-columns: 1fr 2fr 2fr;
+    }
+    .sidebar-show-btn {
+        display: block;
+    }
+    .notification-button {
+        display: none;
+    }
+    .bell-icon {
+        display: inline-block;
+    }
+    .notification-container {
+        background-color: #fff;
+    }
+    #fullscreen {
+        display: none;
+    }
+    #dashboard {
+        display: none;
+    }
+    .cards {
+        flex-wrap: wrap;
+        max-height: 10rem;
+    }
+    .cards > div {
+        width: 100%;
     }
 }
